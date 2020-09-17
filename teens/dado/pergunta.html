@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+var myArray = ['dado.html'];    
+
+var Rand = Math.floor(Math.random() * myArray.length);
+
+var concat = myArray[Rand];
+
+function random() {
+   document.getElementById("demo").innerHTML = (concat);
+}
+</script>
+
+<button onClick="random();">
+Pergunta
+</button>
+
+</body>
+</html>
