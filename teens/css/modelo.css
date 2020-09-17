@@ -1,0 +1,22 @@
+  
+    #div-padrao {
+      width: 100%;
+      height: ;
+      background: url("http://i.stack.imgur.com/b983w.jpg");
+      background-repeat: no-repeat;
+    }
+
+    #div-certo {
+      display: none;
+      width: 100%;
+      height: ;
+      background: url("http://i.stack.imgur.com/ybxlO.jpg");
+      background-repeat: no-repeat;
+    }
+    #div-errado {
+      display: none;
+      width: 100%;
+      height: ;
+      background: url("http://i.stack.imgur.com/MRjsF.jpg");
+      background-repeat: no-repeat;
+    }
