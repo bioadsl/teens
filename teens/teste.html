@@ -1,0 +1,18 @@
+ <html>
+        <body>
+
+            <input type="text" id="campo"  name="campo"/>
+
+            <div id="campoDoCalculo">
+                
+            </div>
+            <input type="button" id="btnCalc" onclick="calcula(campo.value)">
+
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script>
+               function calcula(valor){
+                     $("#campoDoCalculo").html(valor); //use jquery para mostrar o valor digitado ao clicar no botão
+               }
+            </script>
+        </body>
+    </html>

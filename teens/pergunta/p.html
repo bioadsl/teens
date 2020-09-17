@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../css/modelo.css">
+<script src="../js/falha_rand.js"></script>
+<script src="../js/certo_rand.js"></script>
+<script src="../js/verificar.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="col col-lg-12">          
+          <div class="row justify-content-lg-center">
+              <div class="col-md-auto">
+                   <div id="div-certo" onclick="mudaLampada(1)">
+                      <img src="http://i.stack.imgur.com/ybxlO.jpg" id="luz"/>
+                    <p class="alert alert-success" role="alert">
+                      Parabéns, avance 2 casas! Você ganhou <span id="feedback"> </span> pontos. </p>
+                  </div>
+
+
+                    <div id="div-padrao" onload="mudaLampada(2)" > 
+                      <img src="http://i.stack.imgur.com/b983w.jpg"  id="luz"/>
+                   </div>
+
+                   <div id="div-errado" onclick="mudaLampada(3)">
+                      <img src="http://i.stack.imgur.com/MRjsF.jpg" id="luz"/>
+                   <p class="alert alert-danger" role="alert">Volte 1 casa e tente novamente!</p>
+                  </div>
+            </div>
+          </div>
+      </div>
+<!-- COLOQUE AS PERGUNTAS AQUI EM BAIXO  -->
+<!--  
+##########################  Errado  ######################
+<p> <input type="radio" name="0" value="0" id="errado1">      </p>
+<p> <input type="radio" name="0" value="0" id="errado2">      </p>
+##########################  Certo  ######################
+<p><input type="radio" name="100" value="100" id="certo">
+-->
+
+
+<div class="col-md-auto">
+               
+      <!-- <legend> é a pergunta  -->
+
+   <legend>A qual das árvores pertencia o fruto que o homem comeu no Jardim do Édem?</legend>
+
+       <!-- <input> sao as respostas  -->
+
+     <p><input type="radio" name="0" value="0" id="errado1"> A - Árvore central </p>
+
+     <p><input type="radio" name="100" value="100" id="certo"> B - Árvore do conhecimento do bem e do mal </p>
+
+     <p><input type="radio" name="0" value="0" id="errado2"> C - Árvore da vida </p>
+
+
+    <!-- nao mexe aqui em baixo -->
+       <button class="btn btn-success" onclick="verificar()">Enviar</button>
+       <button class="btn btn-danger" onclick="voltar()">Voltar</button>
+</div>
+
+
+</body>
+</html>
