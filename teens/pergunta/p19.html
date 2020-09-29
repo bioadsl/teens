@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)file:///C:/Desenvolvimento/Gênesis/bootstrap-4.0.0/bootstrap-4.0.0/docs/4.0/examples/jumbotron/index.html? -->
+<html lang="pt-br">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- CSS only -->
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/modelo.css">
+
+  <!-- JS, Popper.js, and jQuery -->
+  
+  <script src="../js/jquery-3.5.1.slim.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/falha_rand.js"></script>
+  <script src="../js/certo_rand.js"></script>
+  <script src="../js/verificar.js"></script>
+
+</head>
+
+<body>
+
+<!--
+  
+  
+ fontes de pesquisa:
+
+ https://www.w3schools.com/charsets/ref_emoji.asp
+ 
+ https://wprock.fr/pt/t/emoji/
+
+---------------------
+------SUCESSO-------- 
+-------+-------------
+ EMOJI |  CODIGO
+-------+-------------
+ 😀      &#128512;
+ ---------------------
+ ✌        &#9996;
+ ---------------------   
+ 🎮      &#127918;
+ --------------------- 
+ 🏆      &#127942;
+ ---------------------
+ 🏅      &#127941;
+---------------------
+ 👍      &#128077;
+---------------------
+ 😎      &#128526;
+---------------------
+
+ ---------------------
+ -------ERRO----------
+ -------+-------------
+ EMOJI |  CODIGO
+-------+-------------
+ 🔒      &#128274;
+ ---------------------
+ 👎     &#128078;
+ ---------------------
+ 💣     &#128163;
+---------------------
+ 😱     &#128561;
+---------------------
+ 😒     &#128530;
+---------------------
+ 😭      &#128557;
+---------------------
+ 😳      &#128563;
+ ---------------------
+ 🙈      &#128584;
+---------------------
+ 🙉      &#128585;   
+---------------------
+ 🙊      &#128586; 
+
+
+
+
+
+  
+
+  --->
+  <div class="container">
+    <div class="col col-lg-12">          
+      <div class="row justify-content-lg-center">
+        <div class="col-md-auto">
+ 
+         <div id="div-certo" onclick="acendeLampada()">
+          <img src="lampada-acesa.jpg" id="luz"/>
+          <p class="alert alert-success" role="alert">
+            Parabéns, avance 2 casas! Você ganhou <span id="feedback"> </span> pontos. </p>
+          </div>
+
+          <div id="div-padrao" onload="mudaLampada(2)" > 
+            <img src="lampada-apagada.jpg"  id="luz"/>
+          </div>
+
+          <div id="div-errado" onclick="mudaLampada(3);">
+            <img src="lampada-quebrada.jpg" id="luz"/>
+            <p class="alert alert-danger" role="alert">Volte 1 casa e tente novamente!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+          <!---------------------- TUTORIAL PARA FAZER AS PERGUNTAS ---------------------------->
+          <!-- 
+          ###################################################################################### 
+          ########################## <legend> é onde vai a pergunta  ###########################
+          Exemplo:
+
+             <legend>
+               O homem comeu o fruto de qual arvore no Jardim do Édem? <-<< Troque o texto
+             </legend>
+
+          ############### <p> é o paragrafo, texto, onde colocamos as perguntas ################ 
+          ############### devem estar abaixo do <input> como no exemplo abaixo  ################ 
+          ############### <input type="radio"> sao as bolinhas das perguntas    ################
+           Exemplo:
+           
+            <p>
+              <input type="radio" name="100" value="100" id="certo"> 
+              B - Árvore do conhecimento do bem e do mal  <-<< Troque o texto
+            </p>
+ 
+          ############################# <input> para respostas Erradas #########################
+          Exemplo 1:
+
+          <p>
+            <input type="radio" name="0" value="0" id="errado1"> 
+            A - Árvore central <-<< Troque o texto
+          </p>
+          
+          Exemplo 2:
+
+          <p>
+            <input type="radio" name="0" value="0" id="errado2"> 
+            C - Árvore da vida  <-<< Troque o texto
+          </p>
+          
+          ############################# <input> para resposta Certa ###########################
+          Exemplo:
+          
+          <p>
+            <input type="radio" name="100" value="100" id="certo"> 
+            B - Árvore do conhecimento do bem e do mal  <-<< Troque o texto
+          </p>
+
+          ######################################################################################
+        -->
+
+        <!---------------- AS PERGUNTAS ESTÃO ABAIXO CONFORME O TUTORIAL ACIMA ----------------->
+ 
+
+      <div class="col-md-auto">
+
+         <!-- <legend> é a pergunta  -->
+
+         <legend>
+            Qual o dia em que Deus criou vegetaçao?
+         </legend>
+
+         <!-- <input> sao as respostas  -->
+
+
+
+         <p>
+            <input type="radio" name="opcao"value="errado2" id="errado2">
+            A - O Primeiro
+         </p>
+
+         <p>
+            <input type="radio" name="opcao" value="errado1" id="errado1">
+            B - O Segundo
+          </p>
+
+         <p>
+            <input type="radio" name="opcao" value="100" id="certo">
+            C - O Terceiro
+         </p>
+
+
+         <!-- nao mexe aqui em baixo -->
+         <button class="btn btn-success" onclick="verificar()">Enviar</button>
+         <button class="btn btn-danger" onclick="voltar()">Voltar</button>
+      </div>
+
+   </div>
+
+</body>
+
+</html>
